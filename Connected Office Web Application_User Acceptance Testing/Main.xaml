@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,3703" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="896,4135" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -51,6 +51,8 @@
       <x:String>System.Security</x:String>
       <x:String>DocumentFormat.OpenXml.Drawing</x:String>
       <x:String>DocumentFormat.OpenXml</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -120,7 +122,7 @@
       <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="568,3638" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence sap:VirtualizedContainerService.HintSize="568,4070" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="TableData" />
       <Variable x:TypeArguments="x:String" Name="row" />
@@ -131,23 +133,19 @@
           <Literal x:TypeArguments="x:String">https://cmpg323-ecopowerlogistics.azurewebsites.net/</Literal>
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:String" Name="CustomerTitle" />
-      <Variable x:TypeArguments="x:String" Name="CustomerName" />
-      <Variable x:TypeArguments="x:String" Name="CustomerSurname" />
-      <Variable x:TypeArguments="x:String" Name="CellPhone" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="506,3527" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="fa522d12-5549-4a75-9d0d-a51d0f55644d" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="506,3959" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="fa522d12-5549-4a75-9d0d-a51d0f55644d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,3270" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,3702" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="TableData" />
               <Variable x:TypeArguments="sd:DataTable" Name="dt_ExcelData" />
@@ -165,13 +163,16 @@
                 </InArgument>
               </ui:ReadRange.Range>
             </ui:ReadRange>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExcelData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,2964" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExcelData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,3398" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,2778" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,3212" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dt_ExcelOrders" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -282,9 +283,32 @@
                     </uix:NClick>
                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fa522d12-5549-4a75-9d0d-a51d0f55644d" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Customers/Create" CvTextArea="319, 568, 82, 15" CvTextArgument="Back to List" CvType="Text" DesignTimeRectangle="320, 565, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="74353290-144b-40c3-95b2-8b0eccf43f6d" InformativeScreenshot="b0f4d84ee232ec6d9ddeec197240a114.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Customers/Create" DesignTimeRectangle="320, 565, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="cb86aa8e-d561-4f59-b496-a8cd4d6ee064" InformativeScreenshot="b0f4d84ee232ec6d9ddeec197240a114.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
+                    <ui:ReadRange AddHeaders="True" DataTable="[dt_ExcelOrders]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Orders" WorkbookPath="C:\Users\ntima\OneDrive\Desktop\CMPG323-Projects\CMPG323-Project4-31967000\CMPG323 EcoPower Logistics Data.xlsx">
+                      <ui:ReadRange.Range>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ui:ReadRange.Range>
+                    </ui:ReadRange>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExcelOrders]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="334,266" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
@@ -293,7 +317,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-7, 0, 974, 1087" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="aaeedb6129a02e97fdc1372df5f387b9.png" Selector="&lt;html app='chrome.exe' url='https://cmpg323-ecopowerlogistics.azurewebsites.net/' /&gt;" Title="New Tab" Url="https://cmpg323-ecopowerlogistics.azurewebsites.net/" />
+        <uix:TargetApp Area="-7, 0, 924, 1087" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="d105ed1dee12a444781de72eb61b9023.jpg" Selector="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" Title="New Tab" Url="https://cmpg323-ecopowerlogistics.azurewebsites.net/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
