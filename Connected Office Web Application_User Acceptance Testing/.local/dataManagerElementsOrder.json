@@ -12,8 +12,13 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Data_Table&Sequence_16",
-        "CSV_dTpRO&Sequence_16"
+        "dt_ExcelOrders&Sequence_21",
+        "dt_ExcelData&Sequence_20",
+        "TableData&Sequence_20",
+        "URL&Sequence_19",
+        "item&Sequence_19",
+        "row&Sequence_19",
+        "TableData&Sequence_19"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
