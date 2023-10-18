@@ -8,7 +8,7 @@ The system is very simple to run. We have an excel file that contains data insid
 Below are the steps of how the automation will occur:
 
 ### 1. The user will have an option to either Register or Login. Say that the user logs in, They will be greated by a welcome page that has the following navigation links (register or login). The user will click on Login and lead to another page. 
-![Alt text](image-1.png)
+![Alt text](README_Images/image-1.png)
 
 ### 2. Once the user has clicked the login navigation link, the user will be redirected to the Log in page where they will be requested to fill in their Email and Password then eventually click the Log in button.
- ![Alt text](image-2.png)
+ ![Alt text](README_Images/image-2.png)
