@@ -1,5 +1,10 @@
 # CMPG323-Project4-31967000
 
+## Proof of Orchestra Submission
+![Alt text](README_Image/proof.png)
+
+![Alt text](README_Image/proof2.png)
+
 ## Introduction
 Project 4 is about Robotic Process Automation(RPA). It uses the same logic as human beings if they were to execute a process. 
 
