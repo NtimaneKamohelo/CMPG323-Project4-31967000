@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "year&Sequence_41",
+        "OrderDatestr&Sequence_41",
+        "DeliveryAddress&Sequence_41",
+        "OrderDate&Sequence_41",
         "Year&Sequence_41",
         "YearSelector&Sequence_41",
         "variable1&Sequence_41",
